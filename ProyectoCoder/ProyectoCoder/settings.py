@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ProyectoCoder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/TELCOM MPC/OneDrive/Documentos/curso python/visual studio code/ProyectoFinalCoder/ProyectoCoder/AppProyecto/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
