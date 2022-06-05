@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0)eo2eia3(8s&!7m)5x0o9_l(&4e2&%cp4$nre3l#r*=g(osm@'
+SECRET_KEY = 'django-insecure-%a+2j^pg(k@=irffuepsq1uqi_okm*n@q%kmxzqhcuz@h7*vnp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'AppProyecto',
+    'AppFinal',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ProyectoCoder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/TELCOM MPC/OneDrive/Documentos/curso python/visual studio code/ProyectoFinalCoder/ProyectoCoder/AppProyecto/templates/"],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
