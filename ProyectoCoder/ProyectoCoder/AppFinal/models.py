@@ -6,7 +6,7 @@ class Contacto(models.Model):
     email = models.EmailField()
 
     def __str__(self) -> str:
-        return self.nombre+" -Email: "+str(self.email)
+        return self.nombre+" - Email: "+str(self.email)
 
 class Cliente(models.Model):
     nombre = models.CharField(max_length=30)
@@ -14,11 +14,11 @@ class Cliente(models.Model):
     email = models.EmailField()
 
     def __str__(self) -> str:
-        return self.nombre+" -Email: "+str(self.email)
+        return self.nombre+" - Email: "+str(self.email)
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=30)
     articulo = models.IntegerField()
 
     def __str__(self) -> str:
-        return self.nombre+" -Email: "+str(self.email)
+        return "Producto: "+self.nombre+" - Nro.Art: "+str(self.articulo)

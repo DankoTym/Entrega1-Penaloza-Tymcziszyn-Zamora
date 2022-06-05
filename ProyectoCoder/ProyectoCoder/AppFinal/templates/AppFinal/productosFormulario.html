@@ -1,0 +1,24 @@
+{% extends "AppFinal/padre.html" %}
+{% load static %}
+
+
+<!-- Titulo-->
+{% block contenidoDeTitulo %}
+
+<h2>Formulario de Productos</h2>
+
+{% endblock%}
+
+
+<!-- ACCIÓN-->
+{% block contenidoQueCambia %}
+
+<form action="{% url 'productosFormulario' %}" method="POST">{% csrf_token %}  <!-- Con esto se genera el token necesario para enviar los datos--> 
+    <h1>Ingrese datos del producto:</h1>
+    <table>
+        {{miFormulario.as_table}}
+    </table>
+    <input type="submit" value="Enviar Formulario API">        <!--- Acá se genera el boton para enviar los datos -->
+</form>
+
+{% endblock %}
