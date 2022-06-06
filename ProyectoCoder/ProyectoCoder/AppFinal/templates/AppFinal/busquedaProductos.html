@@ -1,0 +1,19 @@
+{% extends "AppFinal/padre.html" %}
+
+{% load static %}
+<!--   -->
+{% block contenidoDeTitulo %}
+
+<h3>Buscador de Productos</h3>
+
+{% endblock%}
+<!--    -->
+{% block contenidoQueCambia %}
+
+<form action="{% url 'buscarProducto'%}" method="GET">
+    <h1>Ingrese el número de Artículo que desea buscar: </h1>
+    <input type="numer" name="articulo" placeholder="ARTICULO" id="articulo">
+    <input type="submit" value="Buscar">      
+</form>
+
+{% endblock %}

@@ -12,7 +12,7 @@ def Inicio(self):
     return HttpResponse(documento)
 
 
-#Carga de datos.
+#---------------------------------Carga de datos.-------------------------------
 def productosFormulario(request):
     if request.method == 'POST':
         miFormulario = ProductosFormulario(request.POST)
@@ -64,21 +64,34 @@ def contactoFormulario(request):
 
     return render(request, 'AppFinal/contactoFormulario.html', {'miFormulario':miFormulario})
 
+#----------------------------Busqueda de Datos------------------------------
+def busquedaProductos(request):                                        
+
+    return render(request, "AppFinal/busquedaProductos.html")
 
 
-"""
-def busquedaCamada(request):        #Esta buncion solo recibe el numero de camada que quiero buscar
-
-    return render(request, "AppFinal/busquedaCamada.html")
-
-def buscar(request):               #Esta es la funcion que busca la camada
-
-    #respuesta = f"Estoy buscando la camada nro: {request.GET['camada']}"
-    if request.GET['camada']:
-        camada =request.GET['camada']               #Hace que camada sea igual a lo que me mandan desde la vista.
-        cursos = Curso.objects.filter(camada=camada)    #Realisa una comparacion entre lo que busco y lo que hay cargado.
-        return render(request, "AppCoder/resultadosBusqueda.html", {'cursos':cursos, 'camada':camada})
+def buscarProducto(request):                                                      
+    if request.GET['articulo']:
+        articulo =request.GET['articulo']               
+        productos = Producto.objects.filter(articulo=articulo)    
+        return render(request, "AppFinal/resultadosProducto.html", {'productos':productos, 'articulo':articulo})
     else:
-        respuesta = "No se ingreso ninguna comisión" 
+        respuesta = "No se ingreso ningún número de artículo" 
         return HttpResponse(respuesta)
-"""
+    
+
+#-----------------------------------------------
+
+def busquedaClientes(request):                                        
+
+    return render(request, "AppFinal/busquedaClientes.html")
+
+
+def buscarClientes(request):                                                      
+    if request.GET['email']:
+        email =request.GET['email']               
+        clientes = Cliente.objects.filter(email=email)    
+        return render(request, "AppFinal/resultadosClientes.html", {'clientes':clientes, 'emial':email})
+    else:
+        respuesta = "No se ingreso ningún email" 
+        return HttpResponse(respuesta)
